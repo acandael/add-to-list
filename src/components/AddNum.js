@@ -8,8 +8,14 @@ const AddNum = ({ valuesList, setValuesList }) => {
     setValuesList([...valuesList, number]);
   };
 
+  const submitHandler = (event) => {
+    event.preventDefault();
+    addNumber(value);
+    setValue('');
+  };
+
   return (
-    <form onSubmit={addNumber}>
+    <form onSubmit={submitHandler}>
       <input
         type="text"
         value={value}

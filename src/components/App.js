@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import AddNum from './AddNum';
+import NumberList from './NumberList';
 
 const App = () => {
-  const { valuesList, setValuesList } = useState([]);
-
-  console.log(valuesList);
+  const [valuesList, setValuesList] = useState([]);
 
   return (
     <div>
-      {<AddNum valuesList={valuesList} setValuesList={setValuesList} />}
+      <div>
+        {<AddNum valuesList={valuesList} setValuesList={setValuesList} />}
+      </div>
+      <div>{<NumberList valuesList={valuesList} />}</div>
     </div>
   );
 };
