@@ -7,6 +7,7 @@ const NumberList = ({ valuesList, setValuesList }) => {
 
   const deleteSelected = (value) => {
     setValuesList(valuesList.filter((e) => e !== value));
+    setActiveButton('');
   };
 
   const handleSelected = (selectedNum, selectedButton) => {
