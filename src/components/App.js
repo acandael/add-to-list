@@ -11,7 +11,9 @@ const App = () => {
       <div>
         {<AddNum valuesList={valuesList} setValuesList={setValuesList} />}
       </div>
-      <div>{<NumberList valuesList={valuesList} />}</div>
+      <div>
+        {<NumberList valuesList={valuesList} setValuesList={setValuesList} />}
+      </div>
       <div>{<TotalValue valuesList={valuesList} />}</div>
     </div>
   );
